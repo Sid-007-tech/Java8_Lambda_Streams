@@ -1,4 +1,4 @@
-package com.java8.lambda;
+package Lambda;
 @FunctionalInterface
 public interface SumInter {
     public int sum(int a, int b);

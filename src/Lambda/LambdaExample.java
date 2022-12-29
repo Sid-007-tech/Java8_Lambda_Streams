@@ -1,6 +1,4 @@
-package com.java8.lambda;
-
-import javax.management.remote.rmi._RMIConnection_Stub;
+package Lambda;
 
 public class LambdaExample {
     public static void main(String[] args) {

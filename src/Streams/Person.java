@@ -1,4 +1,4 @@
-package com.java8.lambda;
+package Streams;
 
 public class Person {
     int pid;

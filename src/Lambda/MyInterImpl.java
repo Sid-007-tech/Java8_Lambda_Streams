@@ -1,4 +1,4 @@
-package com.java8.lambda;
+package Lambda;
 
 public class MyInterImpl implements MyInter {
     @Override
