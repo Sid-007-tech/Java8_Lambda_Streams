@@ -1,6 +1,8 @@
 package Streams;
 
-public class Person {
+import java.util.Comparator;
+
+public class Person implements Comparable<Person>{
     int pid;
     String pname;
 
@@ -8,6 +10,7 @@ public class Person {
         this.pid = pid;
         this.pname = pname;
     }
+
 
     public int getPid() {
         return pid;
@@ -32,4 +35,16 @@ public class Person {
                 ", pname='" + pname + '\'' +
                 '}';
     }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.pid-o.pid;
+    }
+
+    public static Comparator<Person> newAgeComparator = new Comparator<Person>() {
+        @Override
+        public int compare(Person o1, Person o2) {
+            return o1.getPname().compareTo(o2.getPname());
+        }
+    };
 }

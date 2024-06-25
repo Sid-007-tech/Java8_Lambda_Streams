@@ -1,5 +1,7 @@
 package Lambda;
 
+import java.util.Objects;
+
 public class Person {
     int pid;
     String pname;
@@ -7,6 +9,19 @@ public class Person {
     public Person(int pid, String pname) {
         this.pid = pid;
         this.pname = pname;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return pid == person.pid && Objects.equals(pname, person.pname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(pid, pname);
     }
 
     public int getPid() {
